@@ -9,9 +9,9 @@ assignees: ''
 
 As a **role**, I can **action** so that **expected benefit**
 
-#`#0969DA`**Acceptance Criteria:**
+#**Acceptance Criteria:**
 
-Acceptance Criteria 1:
-Acceptance Criteria 2:
-Acceptance Criteria 3:
-Acceptance Criteria 4:
+*Acceptance Criteria 1:
+*Acceptance Criteria 2:
+*Acceptance Criteria 3:
+*Acceptance Criteria 4:
