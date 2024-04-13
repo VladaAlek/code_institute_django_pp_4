@@ -1,1 +1,1 @@
-![Landing Page](static/images/PP4 Landing Page.png)
+![Landing Page](static/images/PP4_Landing_Page.png)
