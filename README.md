@@ -1,1 +1,1 @@
-![Alt text](static/images/PP4 Landing Page.png "Landing Page")
+![Landing Page](static/images/PP4 Landing Page.png)
