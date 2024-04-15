@@ -1,1 +1,1 @@
-![Landing Page](./static/images/landing_page.png)
+![Landing Page](./static/images/landing_page_1.png)
