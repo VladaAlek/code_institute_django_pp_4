@@ -93,6 +93,11 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://vladaalek-codeinstitute-dwb9z7kag7v.ws-eu110.gitpod.io",
+    "https://vladimir-django-pp4-61bc0565e952.herokuapp.com/"
+]
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
