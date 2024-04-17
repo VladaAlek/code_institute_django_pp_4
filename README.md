@@ -25,6 +25,11 @@ This basic project enables end-users to create, read, update, and delete entries
 **Data Management Page**
 ![CRUD Page](./static/images/crud.png)
 
+
+
+![ERD](./static/images/ERD.png)
+
+
 ## Technologies Used ?
 - HTML, CSS, Django 
 
