@@ -8,5 +8,7 @@ from .models import Book
     #return HttpResponse("Hello, you are in the Berlin Project")
 
 class BookList(generic.ListView):
-    model = Book
+    #model = Book
+    queryset = Book.objects.all()
+    template_name = "book_list.html"
 
