@@ -8,7 +8,7 @@ class Book(models.Model):
     author = models.CharField(max_length=150)
     publisher = models.CharField(max_length=100)
     year = models.IntegerField()
-    summary = models.ForeignKey('Review', on_delete=models.CASCADE, related_name="books", null=True, blank=True)
+    summary = models.ForeignKey('Review', on_delete=models.CASCADE, related_name="books", null=True)
 
     def __str__(self):
         return self.title
@@ -18,7 +18,7 @@ class Book(models.Model):
 
 class Review(models.Model):
     content = models.TextField(max_length=500, unique=True)
-    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    book_title = models.ForeignKey(Book, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
-        return f"You are reading the critique of the {self.book.title} - {self.content[:50]}"
+        return f"You are reading the critique of the {self.book_title.title} - {self.content[:50]}"
