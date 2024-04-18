@@ -18,7 +18,7 @@ class Book(models.Model):
 
 class Review(models.Model):
     content = models.TextField(max_length=500, unique=True)
-    book_title = models.ForeignKey(Book, on_delete=models.CASCADE, default=1)
+    book_title = models.ForeignKey(Book, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f"You are reading the critique of the {self.book_title.title} - {self.content[:50]}"
