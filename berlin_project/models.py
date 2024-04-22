@@ -4,11 +4,11 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Book(models.Model):
-    title = models.CharField(max_length=150)
-    author = models.CharField(max_length=150)
+    title = models.CharField(max_length=150, unique=True, blank=False)
+    author = models.CharField(max_length=150, blank=False)
     publisher = models.CharField(max_length=100)
     year = models.IntegerField()
-    summary = models.ForeignKey('Review', on_delete=models.CASCADE, related_name="books", null=True)
+    description = models.TextField(blank=False)
 
     def __str__(self):
         return self.title
@@ -17,8 +17,8 @@ class Book(models.Model):
         ordering = ['title']
 
 class Review(models.Model):
-    content = models.TextField(max_length=500, unique=True)
-    book_title = models.ForeignKey(Book, on_delete=models.CASCADE, null=True)
+    content = models.TextField(max_length=500)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='reviews')
 
     def __str__(self):
-        return f"You are reading the critique of the {self.book_title.title} - {self.content[:50]}"
+        return f"Review of '{self.book.title}' - {self.content[:50]}"
